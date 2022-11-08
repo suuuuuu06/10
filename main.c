@@ -5,8 +5,24 @@
 #include<string.h>
 
 void main(void){
-   char str[30]="happy C programming";
-    
+   int i;
+   char str[30];
+   FILE*fp=NULL;
    
-   printf("문자열\"%s\"의 길이: %i",str,strlen(str));//<문자열 길이>=strlen(<입력 문자열>));
+   fp=fopen("sample.txt","w");
+   
+   printf("input a word : ");
+   scanf("%s",str);
+   fprintf(fp,"%s\n",str);
+   
+   printf("input a word : ");
+   scanf("%s",str);
+   fprintf(fp,"%s\n",str);
+   
+   printf("input a word : ");
+   scanf("%s",str);
+   fprintf(fp,"%s\n",str);
+   
+   fclose(fp);
+
 }

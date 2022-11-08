@@ -5,24 +5,17 @@
 #include<string.h>
 
 void main(void){
-   int i;
-   char str[30];
+   
+   char c;
    FILE*fp=NULL;
+   char str[30];
    
-   fp=fopen("sample.txt","w");
+   fp=fopen("sample.txt","r");
    
-   printf("input a word : ");
-   scanf("%s",str);
-   fprintf(fp,"%s\n",str);
-   
-   printf("input a word : ");
-   scanf("%s",str);
-   fprintf(fp,"%s\n",str);
-   
-   printf("input a word : ");
-   scanf("%s",str);
-   fprintf(fp,"%s\n",str);
+   while(fgets(str,30,fp)!=NULL)
+   	printf("%s",str);
    
    fclose(fp);
+   
 
 }
